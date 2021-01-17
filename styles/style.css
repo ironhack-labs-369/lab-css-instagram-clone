@@ -20,16 +20,20 @@ h3 {
     left: 10%;
     position: absolute;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     width: 75%;
 }
 #showcase > img {
-    max-width: 200px;
-    /* height: auto; */
+    max-width: 50%;
+    height: 100%;
 }
 #showcase > aside {
     height: 100%;
-    width: 60%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #top {
     display: flex;
@@ -39,14 +43,16 @@ h3 {
     width: 80%;
     padding-bottom: 0.8em;
 }
-
+#top > img {
+    width: 70%;
+}
 #top > button {
     width: 25%;
-    height: 40px;
+    height: 2.5rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     border: 1px solid #06365f;
     background-color: #1c5380;
     color: #fff;
@@ -62,23 +68,23 @@ h3 {
     color: #06365f;
     width: 80%;
     height: 100%;
-    padding: 20px 30px;
+    padding: 2rem 3.5rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 #bottom {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 80%;
-    margin-top: 30px;
+    margin-top: 2.8rem;
 }
 #bottom button {
     border: none;
+    width: 50%;
 }
-#showcase > aside {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#bottom button img {
+    width: 100%;
 }
+
 .footer {
     background-color: #fff;
     height: 60vh;
@@ -88,7 +94,7 @@ h3 {
 }
 .nav-bar {
     background-color: #fff;
-    padding: 14px 0;
+    padding: 0.9rem 0;
     display: flex;
     width: 60%;
 }
@@ -113,18 +119,18 @@ h3 {
 }
 
 @media only screen and (max-width: 320px) {
-    .nav-bar ul {
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
+    .header {
+        /* position: fixed; */
     }
-
     #showcase {
         flex-direction: column;
         width: 100vw;
     }
     #top {
-        width: 80vw;
+        width: 100vw;
+    }
+    #top > aside {
+        flex: 1;
     }
     #top > img {
         width: 80%;
@@ -140,8 +146,17 @@ h3 {
     #bottom {
         flex-direction: column;
         justify-content: space-around;
+        width: 100vw;
+    }
+    #bottom button {
+        margin-bottom: 1.5rem;
     }
     .footer {
         flex-direction: column;
+    }
+    .nav-bar ul {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
     }
 }
